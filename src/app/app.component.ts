@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'learning-angular-signals';
+  title = 'Welcome to Learning Angular Signals Session';
 }
