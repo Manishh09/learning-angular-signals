@@ -1,27 +1,26 @@
-# LearningAngularSignals
+**ChangeDetection**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+It is the ability to detect change.Change detection in angular makes sure that view and component are always in sync.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![alt text](image-1.png)
 
-## Code scaffolding
+Zone.js:
+This is responsible for scheduling change detection.It is scheduled whenever
+ 1)events like mouseover ,click,submit
+ 2)API request
+ 3)Async funtion like setInterval,setTimeout executes in angular app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ 
+**signal**
+A signal is a wrapper around a value that notifies interested cons
+umers when that value changes. Signals can contain any value, from primitives to complex data structures.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![alt text](image-2.png)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Reference
+https://medium.com/@chandrashekharsingh25/angular-signals-explained-with-practical-examples-e45de6d00925
+https://www.youtube.com/watch?v=ZL_goJVUmz0
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
