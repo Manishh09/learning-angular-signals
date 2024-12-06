@@ -1,0 +1,74 @@
+Signals: 
+
+Reactive primitive
+Helps managing state  of the app
+
+With the help of Signals, Angular will know where exactly the change has occurred in the component tree
+    
+    
+    Updates take place at that particular component ONLY.
+    Knows exactly when a data in a given component is being modified.
+
+    So more control over change-detection
+
+    More performance - no re-rendering of the ENTIRE component Tree.
+____________________________________________________________________________________________________________________
+
+So, How does the Angular Know about this, like When the data in a specific component is modified ?
+
+    Angular Keeps track of the SIGNALS used in  the component tree 
+    and updates that PARTICULAR component alone whenever there's any modification.
+
+    How exactly it will take place?
+
+        - Some kind of subscribing to the SIGNALS , and gets notified if theres any new value of the Signal is updated OR Set.
+
+        - So in this way, Angular will exactly know which SPECIFIC component in the  component tree has to be updated or marked as dirty.
+
+    
+    How do we achieve this ?
+
+        - By wrapping up the data in the form of Signals but should be wrapped carefully.
+
+        - E.g   counter = signal(0)
+
+                inc(){
+                    this.counter.set(this.counter() + 1) 
+                }
+
+__________________________________________________________________________________________________________________
+
+Signals can be used to replace the default change-detection mechanism in Angular
+
+
+Powerful to manage state
+
+
+Signal based CD is not yet available but we can use signals
+
+
+More Declarative and Reactive Style of developing the application is possible with Signals
+
+
+Without signals , app must use Zone.js and Default CDS strategies
+
+
+Zone.js,Default CDS will be removed as a part of upcoming Signal Based Change Detection
+
+__________________________________________________________________________________________________________________
+
+readonly signals: value can not be modified.
+
+Signals are by default Writable
+
+
+IF you mutate / update the value of an object Or a value of variable directly, it will not work with Signal Based Change Detection
+
+if you update the value of an object using  , lets say an increment to the value using ++, Angular will not not be able to know the change has been detected
+
+with signal, when we call update method, on top of a signal, angular will get to know that it has received a value change via a signal update 
+
+its like emitting a value upon update call on signal
+
+    e.g count = 0
+        this.count.update(c => c + 1)

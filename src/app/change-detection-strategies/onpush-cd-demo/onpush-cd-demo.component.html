@@ -1,0 +1,26 @@
+<h3 class="header">OnPush CD Strategy</h3>
+
+<!-- <div class="default-cd">
+    <button name="inc" type="submit" (click)="inc()">click me</button>
+    <h4>{{count}}</h4>
+
+</div> -->
+<div class="onpush-cd-container">
+
+
+    <div class="onpush-cd">
+
+        <button name="incWithInterval" type="submit" (click)="incWithInterval()">Start</button>
+        <button name="incWithInterval" type="submit" (click)="stop()">Stop</button>
+        <h4>Timer Value: {{count}}</h4>
+
+    </div>
+
+    <div class="child-templates">
+
+       <app-onpush-cd-demo-one />
+       <app-onpush-cd-demo-two />
+        
+    </div>
+
+</div>
