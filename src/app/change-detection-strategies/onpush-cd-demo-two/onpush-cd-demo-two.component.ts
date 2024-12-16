@@ -1,12 +1,11 @@
 import { ChangeDetectionStrategy, Component, DoCheck } from '@angular/core';
 
 @Component({
-  selector: 'app-onpush-cd-demo-two',
-  standalone: true,
-  imports: [],
-  templateUrl: './onpush-cd-demo-two.component.html',
-  styleUrl: './onpush-cd-demo-two.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-onpush-cd-demo-two',
+    imports: [],
+    templateUrl: './onpush-cd-demo-two.component.html',
+    styleUrl: './onpush-cd-demo-two.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OnpushCdDemoTwoComponent implements DoCheck{
 

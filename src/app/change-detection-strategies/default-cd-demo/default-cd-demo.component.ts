@@ -3,13 +3,11 @@ import { DefaultCdDemoOneComponent } from "../default-cd-demo-one/default-cd-dem
 import { DefaultCdDemoTwoComponent } from "../default-cd-demo-two/default-cd-demo-two.component";
 
 @Component({
-  selector: 'app-default-cd-demo',
-  standalone: true,
-  imports: [DefaultCdDemoOneComponent, DefaultCdDemoTwoComponent],
-  templateUrl: './default-cd-demo.component.html',
-  styleUrl: './default-cd-demo.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default // this is implicit
-  
+    selector: 'app-default-cd-demo',
+    imports: [DefaultCdDemoOneComponent, DefaultCdDemoTwoComponent],
+    templateUrl: './default-cd-demo.component.html',
+    styleUrl: './default-cd-demo.component.scss',
+    changeDetection: ChangeDetectionStrategy.Default // this is implicit
 })
 export class DefaultCdDemoComponent implements DoCheck{
   count = 0
@@ -22,12 +20,12 @@ export class DefaultCdDemoComponent implements DoCheck{
 
   incWithInterval() {
    this.clearIntl =  setInterval(() => {
-      this.count++
+      this.count++;
     }, 1000)
   }
 
   stop(){
-    clearInterval(this.clearIntl)
+    clearInterval(this.clearIntl);
   }
   ngDoCheck(): void {
     console.log("%cCD is running in DefaultCDDemoComponent", "color:green");
