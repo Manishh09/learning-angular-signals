@@ -1,0 +1,34 @@
+
+
+<section class="vehicle-section">
+    <h2>Star Wars Vehicle Data</h2>
+
+    <div class="vselect">
+        <label for="select">Select Vehicle:</label>
+        <select name="vselection" id="vehicleSelect" [(ngModel)]="selectedVehicle">
+            <option value="undefined" disabled>--Select a vehicle--</option>
+
+            @for (vehicle of vehicles(); track vehicle) {
+
+            <option [ngValue]="vehicle"> {{vehicle.name}}</option>
+            }
+        </select>
+    </div>
+
+    <div class="quantity">
+        <label for="vquantity">Quantity: </label>
+        <input type="number" name="vquantity" id="vehicleQuantity" [(ngModel)]="quantity">
+    </div>
+    <div class="vehicle">
+        <label for="vehiclename">Vehicle Name: {{selectedVehicle()?.name}}</label>
+        
+    </div>
+    <div class="price">
+        <label for="vprice">Price: {{selectedVehicle()?.cost_in_credits}}</label>
+
+    </div>
+    <div [style.color]="color()">
+        Total: {{total()}}
+
+    </div>
+</section>
