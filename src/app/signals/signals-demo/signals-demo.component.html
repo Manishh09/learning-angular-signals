@@ -1,1 +1,23 @@
-<p>signals-demo works!</p>
+<section class="signals-demo">
+
+    <h3>Signals Demo</h3>
+    
+    <p> Search string: {{search()}}</p>
+    
+    <label for="search">Search User:</label>
+    <input type="text" name="search-user" id="search" title="Search for a user" placeholder="Enter search term"
+        (input)="setSearch($event)">
+    
+    <ul class="user-list">
+        <!-- The filteredUsers signal is used to filter the users based on the search term -->
+        <!-- The trackBy function is used to optimize the rendering of the list -->
+        @for (user of filteredUsers(); track $index) {
+    
+            <li>
+               {{ user.name}}
+            </li>
+        }
+    </ul>
+    
+    <button class="add-user-btn" (click)="addUser()">Add User</button>
+</section>
