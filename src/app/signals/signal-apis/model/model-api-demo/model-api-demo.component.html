@@ -1,0 +1,16 @@
+<div class="model-api-demo">
+
+    <div class="header">
+        <h1>{{pageTitle}}</h1>
+    </div>
+
+    <div class="updated-quantity">
+        <h2>Updated Quantity in Parent Component:  {{quantity}}</h2>
+        <div class="quantity-container">
+            <!-- <app-quantity [quantity]="quantity" (quantityChange)="onQuantityChange($event)"></app-quantity> -->
+            <app-quantity [(quantity)]="quantity" ></app-quantity>
+
+        </div>
+    </div>
+
+</div>

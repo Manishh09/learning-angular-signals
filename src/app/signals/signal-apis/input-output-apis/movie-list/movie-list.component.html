@@ -1,0 +1,29 @@
+
+{{filter()}}
+<h2>Filtered Movie List</h2>
+
+<div class="movies-table">
+    
+    @if (filteredMovies().length === 0) {
+        <p>No movies found</p>
+    } @else {
+         <table>
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                </tr>
+                
+                @for (movie of filteredMovies(); track $index) {
+                    <tr (click)="onMovieSelected(movie)">
+                        <td>{{ movie.name}}</td>
+                        <td>{{ movie.year}}</td>
+                        <td>{{ movie.rating}}</td>
+                    </tr>
+                }
+            </thead>
+        </table>
+    }
+</div>
+

@@ -1,0 +1,31 @@
+.header {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #b91f1f;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// add styles for the filter container
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}

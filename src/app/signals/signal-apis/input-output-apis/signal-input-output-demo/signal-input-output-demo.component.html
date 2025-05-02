@@ -1,0 +1,30 @@
+<div class="header">
+
+    <h1>{{pageTitle}}</h1>
+</div>
+<div class="main-container">
+    <div class='filter-container'>
+        <label for="filter">Filter By:</label> 
+        <input type='text' id="filter" placeholder="Enter filter text" [(ngModel)]="filter" /> 
+    </div>
+    
+    <div class="inner-container">
+        <div class="movies-container">
+            <app-movie-list [filter]="filter" (selectedMovie)="getSelectedMovie($event)"/>
+        </div>
+    
+        @if(selectedMovie){
+        <div class="selected-movie">
+            <h2>Selected Movie Data</h2>
+    
+                <div>
+                    <p><strong>Name:</strong> {{selectedMovie.name}}</p>
+                    <p><strong>Year:</strong> {{selectedMovie.year}}</p>
+                    <p><strong>Rating:</strong> {{selectedMovie.rating}}</p>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>

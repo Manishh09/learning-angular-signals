@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignalInputDemoComponent } from './signal-input-demo.component';
+import { QuantityComponent } from './quantity.component';
 
-describe('SignalInputDemoComponent', () => {
-  let component: SignalInputDemoComponent;
-  let fixture: ComponentFixture<SignalInputDemoComponent>;
+describe('QuantityComponent', () => {
+  let component: QuantityComponent;
+  let fixture: ComponentFixture<QuantityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SignalInputDemoComponent]
+      imports: [QuantityComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SignalInputDemoComponent);
+    fixture = TestBed.createComponent(QuantityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

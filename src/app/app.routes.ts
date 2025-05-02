@@ -4,6 +4,8 @@ import { OnpushCdDemoComponent } from './change-detection-strategies/onpush-cd-d
 import { SignalsDemoComponent } from './signals/signals-demo/signals-demo.component';
 import { HomeComponent } from './home/home.component';
 import { WithoutSignalsDemoComponent } from './signals/without-signals-demo/without-signals-demo.component';
+ import { SignalInputOutputDemoComponent } from './signals/signal-apis/input-output-apis/signal-input-output-demo/signal-input-output-demo.component';
+import { ModelApiDemoComponent } from './signals/signal-apis/model/model-api-demo/model-api-demo.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +27,17 @@ export const routes: Routes = [
     {
         path: 'without-signals',
         component: WithoutSignalsDemoComponent
+    },
+    {
+        path: 'input-output-apis',
+        component: SignalInputOutputDemoComponent
+    },
+    {
+        path: 'model-api',
+        component: ModelApiDemoComponent
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
 ];
