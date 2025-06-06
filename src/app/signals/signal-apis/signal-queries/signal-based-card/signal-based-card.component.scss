@@ -1,0 +1,29 @@
+.card-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    margin-top: 20px;
+    height: 60dvh;
+    width: 50dvw;
+}
+
+.card-header {
+    background: #f5f5f5;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-description {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-footer {
+    padding: 1rem;
+    text-align: center;
+}

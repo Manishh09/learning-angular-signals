@@ -4,9 +4,12 @@ import { OnpushCdDemoComponent } from './change-detection-strategies/onpush-cd-d
 import { SignalsDemoComponent } from './signals/signals-demo/signals-demo.component';
 import { HomeComponent } from './home/home.component';
 import { WithoutSignalsDemoComponent } from './signals/without-signals-demo/without-signals-demo.component';
- import { SignalInputOutputDemoComponent } from './signals/signal-apis/input-output-apis/signal-input-output-demo/signal-input-output-demo.component';
+import { SignalInputOutputDemoComponent } from './signals/signal-apis/input-output-apis/signal-input-output-demo/signal-input-output-demo.component';
 import { ModelApiDemoComponent } from './signals/signal-apis/model/model-api-demo/model-api-demo.component';
 import { ViewQueriesDemoComponent } from './signals/signal-apis/signal-queries/view-queries-demo/view-queries-demo.component';
+import { ContentQueriesDemoComponent } from './signals/signal-apis/signal-queries/content-queries-demo/content-queries-demo.component';
+import { DecoratorBasedContentQueriesComponent } from './signals/signal-apis/signal-queries/traditional/decorator-based-content-queries/decorator-based-content-queries.component';
+import { DecoratorBasedViewQueriesComponent } from './signals/signal-apis/signal-queries/traditional/decorator-based-view-queries/decorator-based-view-queries.component';
 
 export const routes: Routes = [
     {
@@ -38,9 +41,34 @@ export const routes: Routes = [
         component: ModelApiDemoComponent
     },
     {
-        path: 'view-queries',
-        component: ViewQueriesDemoComponent
+        path: 'decorator-based-queries',
+        children: [
+            {
+                path: 'view',
+                component: DecoratorBasedViewQueriesComponent
+            },
+            {
+                path: 'content',
+                component: DecoratorBasedContentQueriesComponent
+
+            }
+        ]
     },
+    {
+        path: 'signal-based-queries',
+        children: [
+            {
+                path: 'view',
+                component: ViewQueriesDemoComponent
+            },
+            {
+                path: 'content',
+                component: ContentQueriesDemoComponent
+
+            }
+        ]
+    },
+
     {
         path: '**',
         redirectTo: ''
