@@ -1,0 +1,13 @@
+<h2>View Queries Demo</h2>
+ 
+<div #header>Header</div>
+
+<button (click)="addItem()">Add Item</button>
+
+@for (item of items(); track $index) {
+    <div class="item" #itemDiv>
+        Item {{ item }}
+    </div>
+}
+<!-- Child Component -->
+<app-child />

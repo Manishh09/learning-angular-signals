@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements DoCheck {
 
   ngDoCheck(): void {
-   console.log("%cCD is triggered in App Component", "color:red");
+   //console.log("%cCD is triggered in App Component", "color:red");
   }
   
 }

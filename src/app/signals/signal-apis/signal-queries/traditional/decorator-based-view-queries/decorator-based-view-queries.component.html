@@ -1,0 +1,23 @@
+
+<div class="title">
+    <h2>Decorator Based View Queries</h2>
+</div>
+<div class="description">
+    <p>
+        This component demonstrates how to use Angular's view queries with decorators to query elements in the component's template.
+    </p>
+</div>
+
+<div #header>Header</div>
+
+<button (click)="addItem()">Add Item</button>
+
+@for (item of items; track $index) {
+    <div class="itemDiv" #itemDiv>
+        Item {{ item }}
+    </div>
+}
+
+<!-- Child Component -->
+<app-child />
+ 

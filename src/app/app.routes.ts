@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { WithoutSignalsDemoComponent } from './signals/without-signals-demo/without-signals-demo.component';
  import { SignalInputOutputDemoComponent } from './signals/signal-apis/input-output-apis/signal-input-output-demo/signal-input-output-demo.component';
 import { ModelApiDemoComponent } from './signals/signal-apis/model/model-api-demo/model-api-demo.component';
+import { ViewQueriesDemoComponent } from './signals/signal-apis/signal-queries/view-queries-demo/view-queries-demo.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,10 @@ export const routes: Routes = [
     {
         path: 'model-api',
         component: ModelApiDemoComponent
+    },
+    {
+        path: 'view-queries',
+        component: ViewQueriesDemoComponent
     },
     {
         path: '**',
