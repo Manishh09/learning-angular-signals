@@ -5,7 +5,8 @@ import { ChildComponent } from "../child/child.component";
   selector: 'app-view-queries-demo',
   imports: [ChildComponent],
   templateUrl: './view-queries-demo.component.html',
-  styleUrl: './view-queries-demo.component.scss'
+  styleUrl: './view-queries-demo.component.scss',
+  standalone: true
 })
 export class ViewQueriesDemoComponent {
 

@@ -4,7 +4,9 @@ import { AfterContentInit, Component, contentChild, ContentChild, ElementRef } f
   selector: 'app-card',
   imports: [],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrl: './card.component.scss',
+  standalone: true
+
 })
 export class CardComponent  implements AfterContentInit {
 

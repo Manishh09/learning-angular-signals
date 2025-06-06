@@ -6,7 +6,7 @@ import { ChildComponent } from "../../child/child.component";
   standalone: true,
   imports: [ChildComponent],
   templateUrl: './decorator-based-view-queries.component.html',
-  styleUrl: './decorator-based-view-queries.component.scss'
+  styleUrl: './decorator-based-view-queries.component.scss',
 })
 export class DecoratorBasedViewQueriesComponent implements AfterViewInit {
 

@@ -4,7 +4,8 @@ import { Component, contentChild, contentChildren, effect, ElementRef, QueryList
   selector: 'app-signal-based-card',
   imports: [],
   templateUrl: './signal-based-card.component.html',
-  styleUrl: './signal-based-card.component.scss'
+  styleUrl: './signal-based-card.component.scss',
+  standalone: true
 })
 export class SignalBasedCardComponent {
   // Component logic goes here

@@ -6,6 +6,8 @@ import { SignalBasedCardComponent } from "../signal-based-card/signal-based-card
   imports: [SignalBasedCardComponent],
   templateUrl: './content-queries-demo.component.html',
   styleUrl: './content-queries-demo.component.scss',
+  standalone: true
+
 })
 export class ContentQueriesDemoComponent {
 

@@ -5,7 +5,9 @@ import { CardComponent } from "../../card/card.component";
   selector: 'app-decorator-based-content-queries',
   imports: [CardComponent],
   templateUrl: './decorator-based-content-queries.component.html',
-  styleUrl: './decorator-based-content-queries.component.scss'
+  styleUrl: './decorator-based-content-queries.component.scss',
+  standalone: true
+
 })
 export class DecoratorBasedContentQueriesComponent {
 
