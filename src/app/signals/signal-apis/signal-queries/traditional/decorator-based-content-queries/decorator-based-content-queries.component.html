@@ -15,12 +15,29 @@
 <!-- Content Projection -->
 <app-card>
     <!-- Content to be projected -->
-    <div #header class="card-header">
-        <p>Header</p>
+     <!-- 1. Class Based Projection -->
+    <!-- <div #header class="header" >
+    <h3>Card Header</h3>
+  </div> -->
+
+    <!-- 2. slot Based Projection -->
+    <!-- <div #header  slot="header">
+    <h3>Card Header</h3>
+  </div> -->
+  
+    <!-- 3. Attribute Based Projection -->
+    <div #header class="card-header" header>
+        <h3>Card Header</h3>
     </div>
+
     <!-- body -->
+    <div #body class="card-body" body>
+        <p>Card Body</p>
+    </div>
 
     <!-- footer -->
-
+    <div #footer class="card-footer" footer>
+        <p>Card Footer</p>
+    </div>
 
 </app-card>

@@ -4,12 +4,27 @@
   <!-- Header -->
   <div class="card-header">
     <!-- Single Slot Projection -->
-    <ng-content></ng-content>
+    <!-- <ng-content></ng-content> -->
+
+    <!-- <ng-content select=".header"></ng-content> -->
+    <!-- <ng-content select="[slot='header']"></ng-content> -->
+    <ng-content select="[header]"></ng-content>
   </div>
 
-  
-  <!-- Body -->
- 
-  <!-- Footer -->
 
-</div>
+  <!-- Body -->
+
+  <div class="card-body">
+    <!-- <ng-content select=".body"></ng-content> -->
+    <!-- <ng-content select="[slot='body']"></ng-content> -->
+    <ng-content select="[body]"></ng-content>
+
+    <!-- Footer -->
+    <div class="card-footer">
+      <!-- <ng-content select=".footer"></ng-content> -->
+      <!-- <ng-content select="[slot='footer']"></ng-content> -->
+      <ng-content select="[footer]"></ng-content>
+    </div>
+
+
+  </div>
