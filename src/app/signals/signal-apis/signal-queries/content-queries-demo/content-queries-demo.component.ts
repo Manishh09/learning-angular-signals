@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { SignalBasedCardComponent } from "../signal-based-card/signal-based-card.component";
 
 @Component({
   selector: 'app-content-queries-demo',
-  imports: [SignalBasedCardComponent],
+  imports: [SignalBasedCardComponent, ],
   templateUrl: './content-queries-demo.component.html',
   styleUrl: './content-queries-demo.component.scss',
-  standalone: true
+  standalone: true,
 
 })
 export class ContentQueriesDemoComponent {
-
+  
 }

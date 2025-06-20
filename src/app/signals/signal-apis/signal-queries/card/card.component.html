@@ -4,11 +4,18 @@
   <!-- Header -->
   <div class="card-header">
     <!-- Single Slot Projection -->
+
     <!-- <ng-content></ng-content> -->
 
     <!-- <ng-content select=".header"></ng-content> -->
+
     <!-- <ng-content select="[slot='header']"></ng-content> -->
-    <ng-content select="[header]"></ng-content>
+
+    <!-- Attribute Based Projection -->
+    <!-- <ng-content select=[header]></ng-content> -->
+
+    <!-- ngProjectAs -->
+      <ng-content ngProjectAs="header"></ng-content>
   </div>
 
 
@@ -17,14 +24,19 @@
   <div class="card-body">
     <!-- <ng-content select=".body"></ng-content> -->
     <!-- <ng-content select="[slot='body']"></ng-content> -->
-    <ng-content select="[body]"></ng-content>
 
-    <!-- Footer -->
-    <div class="card-footer">
-      <!-- <ng-content select=".footer"></ng-content> -->
-      <!-- <ng-content select="[slot='footer']"></ng-content> -->
-      <ng-content select="[footer]"></ng-content>
-    </div>
+    <ng-content select="[body]"></ng-content>
 
 
   </div>
+
+
+  <!-- Footer -->
+  <div class="card-footer">
+    <!-- <ng-content select=".footer"></ng-content> -->
+    <!-- <ng-content select="[slot='footer']"></ng-content> -->
+
+      <ng-content select="[footer]"></ng-content>
+  </div>
+
+</div>

@@ -1,17 +1,22 @@
 <div class="card-container">
     <!-- Header -->
     <div class="card-header">
-        <!-- Projected Content -->
-        <ng-content></ng-content>
+        <ng-content select="[header]"></ng-content>
     </div>
 
     <!-- Description -->
-    
+    <div class="card-description">
+        <ng-content select="[description]"></ng-content>
+    </div>
 
     <!-- Body -->
-   
+    <div class="card-body">
+        <ng-content select="[body]"></ng-content>
+    </div>
 
     <!-- Footer -->
-    
+    <div class="card-footer">
+        <ng-content select="[footer]"></ng-content>
+    </div>
 
 </div>

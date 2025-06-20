@@ -9,21 +9,57 @@
   <p>
     The content queries are set up in the component's TypeScript file, and the results are displayed below.
   </p>
+  <!-- Content Projection using Signal APIs -->
+   <div class="content-proj">
+  
+     <app-signal-based-card>
+       <!-- Header to be projected -->
+       <!-- <div #header class="header" >
+         <h3>Card Header</h3>
+       </div> -->
+     
+       <!-- <div #header  slot="header">
+         <h3>Card Header</h3>
+       </div> -->
+     
+       <div #header class="header" header>
+         <h3>Card Header</h3>
+       </div>
+     
+     
+       <!-- Description -->
+       <div #description class="description" description>
+         <p>This is a description of the card. It provides an overview of the content and purpose of the card.</p>
+       </div>
+     
+       <!-- Content to be projected -->
+       <div #body class="body" body>
+         <p>
+           This section contains the main content of the card. It can include text, images, or any other relevant information
+           that needs to be displayed.
+         </p>
+       </div>
+
+       <div #body class="body" body>
+         <p>
+           This section contains the main content of the card. It can include text, images, or any other relevant information
+           that needs to be displayed.
+         </p>
+       </div>
+     
+       <!-- Footer to be projected -->
+       <div #footer class="footer" footer>
+         <p>Card Footer</p>
+       </div>
+     
+       <!-- Note - 1: Keep ref variables like #header, #body for accessing via contentChild / contentChildren in child component -->
+     
+       <!-- Note - 2: Keep ref attributes like header, body..etc for accessing via ng-content in child component -->
+     </app-signal-based-card>
+   </div>
 </div>
 
-<!-- Content Projection using Signal APIs -->
-<app-signal-based-card>
-  <!-- Header to be projected -->
-  <div #header>
-    <h3>Card Header</h3>
-  </div>
 
-  <!-- Description -->
- 
 
-  <!-- Body to be projected -->
-  
 
-  <!-- Footer to be projected -->
-  
-</app-signal-based-card>
+

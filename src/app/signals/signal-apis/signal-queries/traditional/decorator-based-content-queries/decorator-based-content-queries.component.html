@@ -9,35 +9,44 @@
     <p>
         The content queries are set up in the component's TypeScript file, and the results are displayed below.
     </p>
+    <!-- Content Projection -->
+    <div class="content-proj">
+        <app-card>
+            <!-- Content to be projected -->
+
+
+            <!-- 1. Class Based Projection -->
+
+            <!-- <div #header class="header" >
+                <h3>Card Header</h3>
+            </div> -->
+
+            <!-- 2. slot Based Projection -->
+    
+        <!-- <div #header  slot="header">
+            <h3>Card Header</h3>
+        </div> -->
+         
+    
+        <!-- 3. Attribute Based Projection -->
+        <div #header class="card-header" header>
+            <h3>Card Header</h3>
+        </div>
+    
+        <!-- body -->
+        <div #body class="card-body" body>
+            <p>Card Body</p>
+        </div>
+        <!-- body -->
+        <div #body class="card-body" body>
+            <p>Card Body</p>
+        </div>
+    
+        <!-- footer -->
+        <div #footer class="card-footer" footer>
+            <p>Card Footer</p>
+        </div>
+    
+    </app-card>
 </div>
 
-
-<!-- Content Projection -->
-<app-card>
-    <!-- Content to be projected -->
-     <!-- 1. Class Based Projection -->
-    <!-- <div #header class="header" >
-    <h3>Card Header</h3>
-  </div> -->
-
-    <!-- 2. slot Based Projection -->
-    <!-- <div #header  slot="header">
-    <h3>Card Header</h3>
-  </div> -->
-  
-    <!-- 3. Attribute Based Projection -->
-    <div #header class="card-header" header>
-        <h3>Card Header</h3>
-    </div>
-
-    <!-- body -->
-    <div #body class="card-body" body>
-        <p>Card Body</p>
-    </div>
-
-    <!-- footer -->
-    <div #footer class="card-footer" footer>
-        <p>Card Footer</p>
-    </div>
-
-</app-card>
